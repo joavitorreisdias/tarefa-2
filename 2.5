@@ -39,3 +39,29 @@ float conta(float y){
     }
 return y;
 }
+
+
+#include <iostream>
+#include <cstdlib>
+#include <iomanip>
+#include <math.h>
+using namespace std;
+
+float conta(float x);
+int main(){
+float y;
+float x = 50.0;
+
+    y = conta(x);
+    cout << " a soma do exercicio resulta em :"  << y << endl;
+    return 0;
+}
+float conta(float x){
+    if(x > 0){
+        return (((2*x)-1)/ x)* conta(x-1);
+    }
+    else{
+        return 0;
+    }
+}
+
